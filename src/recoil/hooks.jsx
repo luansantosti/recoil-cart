@@ -38,7 +38,7 @@ export const useRemoveProduct = () => {
       return;
     }
 
-    const newCart = cart.filter(item => item.Id == product.Id)
+    const newCart = cart.filter(item => item.Id !== product.Id)
     
     setCart(newCart)
   }
