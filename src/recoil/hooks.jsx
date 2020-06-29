@@ -27,3 +27,20 @@ export const useAddProduct = () => {
   }
 }
 
+export const useRemoveProduct = () => {
+  const [cart, setCart] = useRecoilState(cartState);
+  
+  return (product) => {
+    const index = cart.findIndex(item => item.id === product.id);
+
+    if (index === -1) {
+      alert('Product not found in cart!')
+      return;
+    }
+
+    const newCart = cart.filter(item => item.Id !== product.Id)
+    
+    setCart(newCart)
+  }
+}
+
