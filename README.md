@@ -1,2 +1,2 @@
-# recoil-cart
-Simple example using recoil js
+# recoil-carte
+Example using recoil js
